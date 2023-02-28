@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	body {
+		@apply from-gray-900 to-gray-800 dark:bg-gradient-to-r bg-white;
+		@apply text-black dark:text-white;
+	}
+}
