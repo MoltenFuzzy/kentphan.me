@@ -9,9 +9,9 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 	import.meta.url
 ).toString();
 
-type PDFViewerProps = { file: string };
+type PdfViewerProps = { file: string };
 
-const PDFViewer: FC<PDFViewerProps> = (props) => {
+const PdfViewer: FC<PdfViewerProps> = (props) => {
 	const { file } = props;
 
 	return (
@@ -25,4 +25,4 @@ const PDFViewer: FC<PDFViewerProps> = (props) => {
 	);
 };
 
-export default PDFViewer;
+export default PdfViewer;

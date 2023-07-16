@@ -8,7 +8,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
 import dynamic from "next/dynamic";
 import ProjectCard from "@/components/ui/ProjectCard";
 
-const PDFViewer = dynamic(() => import("@/components/PDFViewer"), {
+const PdfViewer = dynamic(() => import("@/components/PdfViewer"), {
 	ssr: false,
 });
 
@@ -166,7 +166,7 @@ export default function HomePage() {
 					<section className="flex flex-col justify-between">
 						<h1 className="text-4xl font-thin my-4">Resume</h1>
 						<div className="w-fit border-l-2 gradient-border pl-6">
-							<PDFViewer file="resume.pdf" />
+							<PdfViewer file="resume.pdf" />
 						</div>
 					</section>
 				</div>
