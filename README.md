@@ -26,7 +26,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Personalization
 
-If you want to use this, edit the info.json and you should be good.
+If you want to use this, edit the info.json and put your resume PDF in the public folder. Make sure to rename it to resume.pdf, otherwise it won't work.
 
 ## Learn More
 

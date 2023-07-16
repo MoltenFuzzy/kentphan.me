@@ -3,7 +3,7 @@
 import info from "../info.json";
 import { CgMail } from "react-icons/cg";
 import { RiPagesFill } from "react-icons/ri";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
 import dynamic from "next/dynamic";
 import ProjectCard from "@/components/ui/ProjectCard";
@@ -16,6 +16,7 @@ export default function HomePage() {
 	const [showAboutMe, setShowAboutMe] = useState(true);
 	const [showProjects, setShowProjects] = useState(false);
 	const [focusProjectIndex, setFocusProjectIndex] = useState(0);
+	const [prevFocusProjectIndex, setPrevFocusProjectIndex] = useState(0);
 	const divRef = useRef<HTMLDivElement | null>(null);
 
 	const executeScroll = () =>
@@ -83,7 +84,11 @@ export default function HomePage() {
 							</div>
 						</section>
 					) : (
-						<section className="flex flex-col justify-between">
+						<section
+							className={`animate__animated flex flex-col justify-between ${
+								showProjects ? "animate__fadeIn" : ""
+							}`}
+						>
 							<h1 className="text-4xl font-thin my-4">
 								{info.projects[focusProjectIndex].name}
 							</h1>
@@ -170,6 +175,7 @@ export default function HomePage() {
 												setShowAboutMe(false);
 											}
 											setShowProjects(true);
+											setPrevFocusProjectIndex(focusProjectIndex);
 											setFocusProjectIndex(index);
 											executeScroll();
 										}}

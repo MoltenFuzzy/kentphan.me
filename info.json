@@ -75,7 +75,7 @@
 		},
 		{
 			"name": "Graphing Calculator",
-			"link": "https://www.youtube.com/watch?v=iFK0CaNwHyY&t=3s",
+			"link": "",
 			"repo": "https://github.com/MoltenFuzzy/ApeJobs",
 			"demo": "https://www.youtube.com/watch?v=Q3Z3Q4Z3Z3Q",
 			"image": "https://i.imgur.com/hJZS2Sy.png",
@@ -90,7 +90,7 @@
 			"demo": "https://drive.google.com/drive/folders/16-j-HPHc7MAUAPzYnmnTo8eflWoBQpG2?usp=sharing",
 			"image": "https://media.discordapp.net/attachments/941208408672067624/1130158268078104582/Studio_Project_V3.gif?width=921&height=518",
 			"description": "A 2D dungeon crawler game where the player must defeat enemies and collect items to progress through the game. The player has the ability to swing their sword, shoot blobs, and use parry. The player can also use items such as potions and bombs. The game ends when the player defeats the final boss.",
-			"reflection": "I don't have very fond memories of this project. It was mainly my friend and I who worked the most on this project within our 6 man team. Took too large of a scope and we were not able to finish the game. I leveled up my C# and Unity skills, but I decided to purse full stack over game devd. I learned that I don't enjoy working on games as much as I like playing them 😅.",
+			"reflection": "I don't have very fond memories of this project. It was mainly my friend and I who worked the most on this project within our 6 man team. Took too large of a scope and we were not able to finish the game. I leveled up my C# and Unity skills, but I decided to purse full stack over game dev. I learned that I don't enjoy working on games as much as I like playing them 😅.",
 			"technologies": ["C#", "Unity"]
 		}
 	]
