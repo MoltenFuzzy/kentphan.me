@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, text }) => {
 			<div
 				className={`${
 					isHovered ? "opacity-50" : ""
-				} min-w-32 relative aspect-video`}
+				} min-w-32 relative aspect-video border gradient-border`}
 			>
 				<Image src={imageUrl} alt={text} fill />
 			</div>
