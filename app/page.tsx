@@ -109,7 +109,11 @@ export default function HomePage() {
 								<div className="flex gap-x-5">
 									{info.projects[focusProjectIndex].link !== "" && (
 										<div>
-											<a href={info.projects[focusProjectIndex].link}>
+											<a
+												href={info.projects[focusProjectIndex].link}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
 												<button className="mt-5 hover:animate-pulse border-b-2 border-emerald-500">
 													View Site
 												</button>
@@ -118,7 +122,11 @@ export default function HomePage() {
 									)}
 									{info.projects[focusProjectIndex].repo !== "" && (
 										<div>
-											<a href={info.projects[focusProjectIndex].repo}>
+											<a
+												href={info.projects[focusProjectIndex].repo}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
 												<button className="mt-5 hover:animate-pulse border-b-2 border-emerald-500">
 													Repository
 												</button>
@@ -127,7 +135,11 @@ export default function HomePage() {
 									)}
 									{info.projects[focusProjectIndex].demo !== "" && (
 										<div>
-											<a href={info.projects[focusProjectIndex].demo}>
+											<a
+												href={info.projects[focusProjectIndex].demo}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
 												<button className="mt-5 hover:animate-pulse border-b-2 border-emerald-500">
 													Demo
 												</button>
