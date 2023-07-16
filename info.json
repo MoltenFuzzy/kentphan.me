@@ -16,7 +16,7 @@
 			"demo": "",
 			"image": "https://cdn.discordapp.com/attachments/941208408672067624/1130151681892556841/image.png",
 			"description": "A social media platform that allows users to connect with each other through their interests. Users can create posts, comment on posts, and follow other users. More features to be added if I have time.",
-			"reflection": "Mainly a side project to learn modern web frameworks such as NextJS using the T3 stack for type safety on both the client and server. Learned how to use AWS S3 to store user images in bucket, implemented basic authentication, and learned SQL for my postgres database. Lots of learning! 😅",
+			"reflection": "Mainly a side project to learn modern web frameworks such as NextJS using the T3 stack for type safety on both the client and server. It actually started off as Kentan, whiched used a similar type safe stack consisting of Nextjs for the frontend and GraphQL in the backend. Felt as thought GraphQl, specifically TypeGraphQL had too much boilerplate and didn't allow me to build things quickly. Kennekt was a full rewrite of Kentan and a huge improvement on code quality based on what I learned from Kentan. Some other things I learned was how to use AWS S3 to store user images in an s3 bucket, implemented basic authentication, security, and learned SQL for my postgres database. Lots of learning! 😅",
 			"technologies": [
 				"TypeScript",
 				"React",
