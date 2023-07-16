@@ -5,7 +5,6 @@ import { CgMail } from "react-icons/cg";
 import { RiPagesFill } from "react-icons/ri";
 import { useState } from "react";
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import ProjectCard from "@/components/ui/ProjectCard";
 
