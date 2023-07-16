@@ -16,10 +16,10 @@ export default function HomePage() {
 	const [showAboutMe, setShowAboutMe] = useState(true);
 	const [showProjects, setShowProjects] = useState(false);
 	const [focusProjectIndex, setFocusProjectIndex] = useState(0);
-	const myRef = useRef<HTMLElement | null>(null);
+	const divRef = useRef<HTMLDivElement | null>(null);
 
 	const executeScroll = () =>
-		myRef.current?.scrollIntoView({ behavior: "smooth" });
+		divRef.current?.scrollIntoView({ behavior: "smooth" });
 
 	return (
 		<div>
@@ -74,7 +74,7 @@ export default function HomePage() {
 						</a>
 					</div>
 				</header>
-				<div ref={myRef} className="flex flex-col justify-center gap-y-8">
+				<div ref={divRef} className="flex flex-col justify-center gap-y-8">
 					{showAboutMe ? (
 						<section className="flex flex-col justify-between">
 							<h1 className="text-4xl font-thin my-4">Welcome</h1>
