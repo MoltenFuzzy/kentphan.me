@@ -11,8 +11,27 @@
 		{
 			"name": "Kennekt",
 			"link": "https://kennekt.me",
-			"image": "https://i.imgur.com/2Z3Q4ZM.png",
-			"description": "",
+			"repo": "https://github.com/MoltenFuzzy/Kennekt",
+			"demo": "https://www.youtube.com/watch?v=Q3Z3Q4Z3Z3Q",
+			"image": "https://cdn.discordapp.com/attachments/941208408672067624/1130151681892556841/image.png",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab sit sequi expedita recusandae corporis voluptatum laboriosam. Autem, recusandae. Quasi quas distinctio quibusdam nostrum nobis eaque quisquam vero necessitatibus pariatur!",
+			"technologies": [
+				"React",
+				"TypeScript",
+				"React Router",
+				"React Bootstrap",
+				"React Icons",
+				"GitHub Pages"
+			]
+		},
+
+		{
+			"name": "ApeJobs",
+			"link": "",
+			"repo": "https://github.com/MoltenFuzzy/ApeJobs",
+			"demo": "https://www.youtube.com/watch?v=Q3Z3Q4Z3Z3Q",
+			"image": "https://user-images.githubusercontent.com/46156230/172455978-ceceafbc-49da-412a-b2f5-752f96023427.png",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab sit sequi expedita recusandae corporis voluptatum laboriosam. Autem, recusandae. Quasi quas distinctio quibusdam nostrum nobis eaque quisquam vero necessitatibus pariatur!",
 			"technologies": [
 				"React",
 				"TypeScript",
@@ -23,10 +42,12 @@
 			]
 		},
 		{
-			"name": "Personal Website",
-			"link": "https://kentphan.me",
-			"image": "https://i.imgur.com/2Z3Q4ZM.png",
-			"description": "This is my personal website that I created using React and TypeScript. I used React Router to create the different pages and I used React Bootstrap to style the website. I also used React Icons to add icons to the website. I used GitHub Pages to host the website.",
+			"name": "Covid Dashboard",
+			"link": "",
+			"repo": "https://github.com/MoltenFuzzy/ApeJobs",
+			"demo": "https://www.youtube.com/watch?v=Q3Z3Q4Z3Z3Q",
+			"image": "https://user-images.githubusercontent.com/46156230/144631247-b714d17f-8008-42c3-875f-4449bf6c827b.png",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab sit sequi expedita recusandae corporis voluptatum laboriosam. Autem, recusandae. Quasi quas distinctio quibusdam nostrum nobis eaque quisquam vero necessitatibus pariatur.",
 			"technologies": [
 				"React",
 				"TypeScript",
@@ -35,6 +56,40 @@
 				"React Icons",
 				"GitHub Pages"
 			]
+		},
+		{
+			"name": "Graphing Calculator",
+			"link": "https://www.youtube.com/watch?v=iFK0CaNwHyY&t=3s",
+			"repo": "https://github.com/MoltenFuzzy/ApeJobs",
+			"demo": "https://www.youtube.com/watch?v=Q3Z3Q4Z3Z3Q",
+			"image": "https://i.imgur.com/hJZS2Sy.png",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab sit sequi expedita recusandae corporis voluptatum laboriosam. Autem, recusandae. Quasi quas distinctio quibusdam nostrum nobis eaque quisquam vero necessitatibus pariatur!",
+			"technologies": [
+				"React",
+				"TypeScript",
+				"React Router",
+				"React Bootstrap",
+				"React Icons",
+				"GitHub Pages"
+			]
+		},
+		{
+			"name": "InfestationZ",
+			"link": "",
+			"repo": "https://github.com/MoltenFuzzy/InfestationZ",
+			"demo": "https://www.youtube.com/watch?v=Q3Z3Q4Z3Z3Q",
+			"image": "https://user-images.githubusercontent.com/46156230/103430666-42e07900-4b7b-11eb-83c7-c7e75f40710b.png",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab sit sequi expedita recusandae corporis voluptatum laboriosam. Autem, recusandae. Quasi quas distinctio quibusdam nostrum nobis eaque quisquam vero necessitatibus pariatur!",
+			"technologies": ["C++", "SFML"]
+		},
+		{
+			"name": "Scroll of Time",
+			"link": "https://kentphan.me",
+			"repo": "https://github.com/MoltenFuzzy/ApeJobs",
+			"demo": "https://www.youtube.com/watch?v=Q3Z3Q4Z3Z3Q",
+			"image": "https://media.discordapp.net/attachments/941208408672067624/1128092285788246026/image.png?width=970&height=469",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ab sit sequi expedita recusandae corporis voluptatum laboriosam. Autem, recusandae. Quasi quas distinctio quibusdam nostrum nobis eaque quisquam vero necessitatibus pariatur!",
+			"technologies": ["C#", "Unity"]
 		}
 	]
 }
