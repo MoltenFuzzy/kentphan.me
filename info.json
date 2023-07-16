@@ -53,7 +53,7 @@
 			"demo": "https://www.youtube.com/watch?v=Q3Z3Q4Z3Z3Q",
 			"image": "https://user-images.githubusercontent.com/46156230/144631247-b714d17f-8008-42c3-875f-4449bf6c827b.png",
 			"description": "A dashboard for Covid-19 data that displays the number of cases, deaths, and recoveries for each country. Users can also search for a specific country and view the data for that country.",
-			"reflection": "Good memories working with my 3 friends and a grad student. It was my first learn building a full stack application and I learned a lot from this project. I was in charge of the backend of the application, which we use Django and Django Rest Framework to build a REST API. I also learned how to use React because I thought the frontend was a buggy mess so I decided to rewrite the frontend 3 days before the deadline. This was my quarter long project for my CS180(Software Engineering) class and I enjoyed learning about software development techniques with a touch of design patterns.",
+			"reflection": "Good memories working with my 3 friends and a grad student. It was my first learn building a full stack application and I learned a lot from this project. I was in charge of the backend of the application, which we used Django and Django Rest Framework to build a REST API. I also learned how to use React because I thought the frontend was a buggy mess so I decided to rewrite the frontend 3 days before the deadline. This was my quarter long project for my CS180(Software Engineering) class and I enjoyed learning about software development techniques with a touch of design patterns.",
 			"technologies": [
 				"JavaScript",
 				"Python",
@@ -90,7 +90,7 @@
 			"demo": "https://drive.google.com/drive/folders/16-j-HPHc7MAUAPzYnmnTo8eflWoBQpG2?usp=sharing",
 			"image": "https://media.discordapp.net/attachments/941208408672067624/1130158268078104582/Studio_Project_V3.gif?width=921&height=518",
 			"description": "A 2D dungeon crawler game where the player must defeat enemies and collect items to progress through the game. The player has the ability to swing their sword, shoot blobs, and use parry. The player can also use items such as potions and bombs. The game ends when the player defeats the final boss.",
-			"reflection": "I don't have very fond memories of this project. It was mainly my friend and I who worked the most on this project within our 6 man team. Took too large of a scope and we were not able to finish the game. I leveled up my C# and Unity skills, but I decided to purse a full stack developement over games. I learned that I don't enjoy working on games as much as I like playing them 😅.",
+			"reflection": "I don't have very fond memories of this project. It was mainly my friend and I who worked the most on this project within our 6 man team. Took too large of a scope and we were not able to finish the game. I leveled up my C# and Unity skills, but I decided to purse full stack over game devd. I learned that I don't enjoy working on games as much as I like playing them 😅.",
 			"technologies": ["C#", "Unity"]
 		}
 	]

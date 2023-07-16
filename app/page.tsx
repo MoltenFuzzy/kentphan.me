@@ -3,7 +3,7 @@
 import info from "../info.json";
 import { CgMail } from "react-icons/cg";
 import { RiPagesFill } from "react-icons/ri";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
 import dynamic from "next/dynamic";
 import ProjectCard from "@/components/ui/ProjectCard";
@@ -16,6 +16,10 @@ export default function HomePage() {
 	const [showAboutMe, setShowAboutMe] = useState(true);
 	const [showProjects, setShowProjects] = useState(false);
 	const [focusProjectIndex, setFocusProjectIndex] = useState(0);
+	const myRef = useRef<HTMLElement | null>(null);
+
+	const executeScroll = () =>
+		myRef.current?.scrollIntoView({ behavior: "smooth" });
 
 	return (
 		<div>
@@ -70,7 +74,7 @@ export default function HomePage() {
 						</a>
 					</div>
 				</header>
-				<div className="flex flex-col justify-center gap-y-8">
+				<div ref={myRef} className="flex flex-col justify-center gap-y-8">
 					{showAboutMe ? (
 						<section className="flex flex-col justify-between">
 							<h1 className="text-4xl font-thin my-4">Welcome</h1>
@@ -167,6 +171,7 @@ export default function HomePage() {
 											}
 											setShowProjects(true);
 											setFocusProjectIndex(index);
+											executeScroll();
 										}}
 									>
 										<ProjectCard imageUrl={project.image} text={project.name} />
@@ -186,7 +191,7 @@ export default function HomePage() {
 			<footer className="min-w-full p-4 text-white">
 				<div className="container mx-auto">
 					<div className="flex items-center justify-center">
-						<p className="text-sm">
+						<p className="text-sm text-center">
 							&copy; 2023 kentphan.me by MoltenFuzzy LLC. All rights reserved.
 							Please hire me.
 						</p>
