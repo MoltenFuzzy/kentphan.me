@@ -49,8 +49,8 @@
 		{
 			"name": "Covid Dashboard",
 			"link": "",
-			"repo": "https://github.com/MoltenFuzzy/ApeJobs",
-			"demo": "https://www.youtube.com/watch?v=Q3Z3Q4Z3Z3Q",
+			"repo": "https://github.com/MoltenFuzzy/Covid-Dashboard",
+			"demo": "",
 			"image": "https://user-images.githubusercontent.com/46156230/144631247-b714d17f-8008-42c3-875f-4449bf6c827b.png",
 			"description": "A dashboard for Covid-19 data that displays the number of cases, deaths, and recoveries for each country. Users can also search for a specific country and view the data for that country.",
 			"reflection": "Good memories working with my 3 friends and a grad student. It was my first learn building a full stack application and I learned a lot from this project. I was in charge of the backend of the application, which we used Django and Django Rest Framework to build a REST API. I also learned how to use React because I thought the frontend was a buggy mess so I decided to rewrite the frontend 3 days before the deadline. This was my quarter long project for my CS180(Software Engineering) class and I enjoyed learning about software development techniques with a touch of design patterns.",
