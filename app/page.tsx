@@ -12,12 +12,33 @@ const PdfViewer = dynamic(() => import("@/components/PdfViewer"), {
 	ssr: false,
 });
 
+const useWindowWide = (size: number) => {
+	const [width, setWidth] = useState(0);
+
+	useEffect(() => {
+		function handleResize() {
+			setWidth(window.innerWidth);
+		}
+
+		window.addEventListener("resize", handleResize);
+
+		handleResize();
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, [setWidth]);
+
+	return width;
+};
+
 export default function HomePage() {
 	const [showAboutMe, setShowAboutMe] = useState(true);
 	const [showProjects, setShowProjects] = useState(false);
 	const [focusProjectIndex, setFocusProjectIndex] = useState(0);
 	const [prevFocusProjectIndex, setPrevFocusProjectIndex] = useState(0);
 	const divRef = useRef<HTMLDivElement | null>(null);
+	const wide = useWindowWide(1024);
 
 	const executeScroll = () =>
 		divRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -26,7 +47,7 @@ export default function HomePage() {
 		<div>
 			<div className="container mx-auto p-6">
 				<header className="flex flex-row items-center justify-between mb-6">
-					<h1 className="font-medium text-3xl font-mono">{`${info.fullName}`}</h1>
+					<h1 className="font-medium text-4xl font-mono">{`${info.fullName}`}</h1>
 					<div className="flex flex-row items-center justify-center gap-x-5">
 						<a
 							href={`${info.github}`}
@@ -75,123 +96,139 @@ export default function HomePage() {
 						</a>
 					</div>
 				</header>
-				<div ref={divRef} className="flex flex-col justify-center gap-y-8">
+				<div ref={divRef} className="grid grid-cols-1 lg:grid-cols-2 gap-y-8">
 					{showAboutMe ? (
-						<section className="flex flex-col justify-between">
-							<h1 className="text-4xl font-thin my-4">Welcome</h1>
-							<div className="border-l-2 gradient-border pl-6 text-lg whitespace-pre-line md:w-1/2">
-								{`${info.aboutMe}`}
+						<section>
+							<div className="lg:sticky lg:top-28">
+								<h1 className="text-4xl font-thin my-4">About Me</h1>
+								<div className="border-l-2 gradient-border pl-6 whitespace-pre-line w-11/12 lg:w-3/4">
+									{`${info.aboutMe}`}
+								</div>
 							</div>
 						</section>
 					) : (
-						<section
-							className={`animate__animated flex flex-col justify-between ${
-								showProjects ? "animate__fadeIn" : ""
-							}`}
-						>
-							<h1 className="text-4xl font-thin my-4">
-								{info.projects[focusProjectIndex].name}
-							</h1>
-							<div className="border-l-2 gradient-border pl-6 md:w-1/2">
-								<p className="mt-5">
-									{info.projects[focusProjectIndex].description}
-								</p>
-								{info.projects[focusProjectIndex].reflection !== "" && (
+						<section>
+							<div
+								className={`animate__animated ${
+									showProjects ? "animate__fadeIn" : ""
+								} lg:sticky lg:top-28`}
+							>
+								<h1 className="text-4xl font-thin my-4">
+									{info.projects[focusProjectIndex].name}
+								</h1>
+								<div className="border-l-2 gradient-border pl-6 whitespace-pre-line w-11/12 lg:w-3/4">
 									<p className="mt-5">
-										<span className="font-bold">Self-reflections: </span>
-										{info.projects[focusProjectIndex].reflection}
+										{info.projects[focusProjectIndex].description}
 									</p>
-								)}
-								<p className="mt-5">
-									<span className="font-bold">Technologies: </span>
-									{info.projects[focusProjectIndex].technologies.map(
-										(tech, index) => (
-											<span key={tech}>
-												<span>{tech}</span>
-												{index !==
-													info.projects[focusProjectIndex].technologies.length -
-														1 && <span>, </span>}
-											</span>
-										)
+									{info.projects[focusProjectIndex].reflection !== "" && (
+										<p className="mt-5">
+											<span className="font-bold">Self-reflections: </span>
+											{info.projects[focusProjectIndex].reflection}
+										</p>
 									)}
-								</p>
-								<div className="flex gap-x-5">
-									{info.projects[focusProjectIndex].link !== "" && (
-										<div>
-											<a
-												href={info.projects[focusProjectIndex].link}
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												<button className="mt-5 hover:animate-pulse border-b-2 border-emerald-500">
-													View Site
-												</button>
-											</a>
-										</div>
-									)}
-									{info.projects[focusProjectIndex].repo !== "" && (
-										<div>
-											<a
-												href={info.projects[focusProjectIndex].repo}
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												<button className="mt-5 hover:animate-pulse border-b-2 border-emerald-500">
-													Repository
-												</button>
-											</a>
-										</div>
-									)}
-									{info.projects[focusProjectIndex].demo !== "" && (
-										<div>
-											<a
-												href={info.projects[focusProjectIndex].demo}
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												<button className="mt-5 hover:animate-pulse border-b-2 border-emerald-500">
-													Demo
-												</button>
-											</a>
-										</div>
-									)}
+									<ul className="mt-5 flex text-sm flex-wrap gap-2">
+										{info.projects[focusProjectIndex].technologies.map(
+											(tech, index) => (
+												<li
+													key={tech}
+													className="bg-cyan-900 px-2 py-1 rounded-2xl text-indigo-50"
+												>
+													{tech}
+												</li>
+											)
+										)}
+									</ul>
+									<div className="flex gap-x-5">
+										{info.projects[focusProjectIndex].link !== "" && (
+											<div>
+												<a
+													href={info.projects[focusProjectIndex].link}
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													<button className="mt-5 hover:animate-pulse border-b-2 border-emerald-500">
+														View Site
+													</button>
+												</a>
+											</div>
+										)}
+										{info.projects[focusProjectIndex].repo !== "" && (
+											<div>
+												<a
+													href={info.projects[focusProjectIndex].repo}
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													<button className="mt-5 hover:animate-pulse border-b-2 border-emerald-500">
+														Repository
+													</button>
+												</a>
+											</div>
+										)}
+										{info.projects[focusProjectIndex].demo !== "" && (
+											<div>
+												<a
+													href={info.projects[focusProjectIndex].demo}
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													<button className="mt-5 hover:animate-pulse border-b-2 border-emerald-500">
+														Demo
+													</button>
+												</a>
+											</div>
+										)}
+									</div>
 								</div>
 							</div>
 						</section>
 					)}
-					<section className="flex flex-col justify-between">
-						<h1 className="text-4xl font-thin my-4">Projects</h1>
-						<div className="border-l-2 gradient-border pl-6">
-							<div className="grid md:grid-cols-3 gap-4 ">
-								{info.projects.map((project, index) => (
-									<div
-										className="p-2"
-										key={project.name}
-										onClick={() => {
-											// if user presses the same project, show about me
-											if (!showAboutMe && index === focusProjectIndex) {
-												setShowAboutMe(true);
-											} else {
-												setShowAboutMe(false);
-											}
-											setShowProjects(true);
-											setPrevFocusProjectIndex(focusProjectIndex);
-											setFocusProjectIndex(index);
-											executeScroll();
-										}}
-									>
-										<ProjectCard imageUrl={project.image} text={project.name} />
-									</div>
-								))}
+					<div>
+						<section className="flex flex-col justify-between">
+							<h1 className="text-4xl font-thin my-4">Projects</h1>
+							<div className="border-l-2 gradient-border pl-6">
+								<div className="grid gap-4 ">
+									{info.projects.map((project, index) => (
+										<div
+											className="p-2"
+											key={project.name}
+											onClick={() => {
+												// if user presses the same project, show about me
+												if (!showAboutMe && index === focusProjectIndex) {
+													setShowAboutMe(true);
+												} else {
+													setShowAboutMe(false);
+												}
+												setShowProjects(true);
+												setPrevFocusProjectIndex(focusProjectIndex);
+												setFocusProjectIndex(index);
+												if (wide < 1024) {
+													executeScroll();
+												}
+											}}
+										>
+											<ProjectCard
+												imageUrl={project.image}
+												text={project.name}
+											/>
+										</div>
+									))}
+								</div>
 							</div>
-						</div>
-					</section>
-					<section className="flex flex-col justify-between">
-						<h1 className="text-4xl font-thin my-4">Resume</h1>
-						<div className="w-fit border-l-2 gradient-border pl-6">
-							<PdfViewer file="resume.pdf" />
-						</div>
-					</section>
+						</section>
+						<section className="flex flex-col justify-between">
+							<h1 className="text-4xl font-thin my-4">Resume</h1>
+							<div className="w-fit border-l-2 gradient-border pl-6">
+								<a
+									href={`${info.resume}`}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<PdfViewer file="resume.pdf" />
+								</a>
+							</div>
+						</section>
+					</div>
 				</div>
 			</div>
 			<footer className="min-w-full p-4 text-white">

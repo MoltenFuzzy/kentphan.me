@@ -20,16 +20,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ imageUrl, text }) => {
 
 	return (
 		<div
-			className="relative"
+			className="relative cursor-pointer"
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 		>
 			<div
 				className={`${
-					isHovered ? "opacity-50" : ""
-				} min-w-32 relative aspect-video border gradient-border`}
+					isHovered ? "opacity-50 " : ""
+				} min-w-32 relative aspect-video border border-gray-600 rounded-lg`}
 			>
-				<Image src={imageUrl} alt={text} fill />
+				<Image src={imageUrl} alt={text} fill className="rounded-lg" />
 			</div>
 
 			{isHovered && (
