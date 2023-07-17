@@ -99,7 +99,7 @@ export default function HomePage() {
 				<div ref={divRef} className="grid grid-cols-1 lg:grid-cols-2 gap-y-8">
 					{showAboutMe ? (
 						<section>
-							<div className="lg:sticky lg:top-20">
+							<div className="lg:sticky lg:top-16">
 								<h1 className="text-4xl font-thin my-4">About Me</h1>
 								<div className="border-l-2 gradient-border pl-6 whitespace-pre-line w-11/12 lg:w-3/4 text-lg">
 									{`${info.aboutMe}`}
@@ -111,7 +111,7 @@ export default function HomePage() {
 							<div
 								className={`animate__animated ${
 									showProjects ? "animate__fadeIn" : ""
-								} lg:sticky lg:top-20`}
+								} lg:sticky lg:top-16`}
 							>
 								<h1 className="text-4xl font-thin my-4">
 									{info.projects[focusProjectIndex].name}
