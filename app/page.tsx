@@ -101,7 +101,7 @@ export default function HomePage() {
 						<section>
 							<div className="lg:sticky lg:top-28">
 								<h1 className="text-4xl font-thin my-4">About Me</h1>
-								<div className="border-l-2 gradient-border pl-6 whitespace-pre-line w-11/12 lg:w-3/4">
+								<div className="border-l-2 gradient-border pl-6 whitespace-pre-line w-11/12 lg:w-3/4 text-lg">
 									{`${info.aboutMe}`}
 								</div>
 							</div>
