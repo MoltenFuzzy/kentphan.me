@@ -77,15 +77,6 @@ export default function HomePage() {
 							</button>
 						</a>
 						<a
-							href={`${info.resume}`}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<button className="hover:animate-pulse">
-								<RiPagesFill size={25} />
-							</button>
-						</a>
-						<a
 							href={`mailto:${info.email}`}
 							target="_blank"
 							rel="noopener noreferrer"
@@ -218,7 +209,7 @@ export default function HomePage() {
 						</section>
 						<section className="flex flex-col justify-between">
 							<h1 className="text-4xl font-thin my-4">Resume</h1>
-							<div className="w-fit border-l-2 gradient-border pl-6">
+							<div className="w-fit border-l-2 gradient-border pl-6 hover:opacity-80">
 								<a
 									href={`${info.resume}`}
 									target="_blank"

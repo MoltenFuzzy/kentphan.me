@@ -87,7 +87,7 @@
 			"image": "https://user-images.githubusercontent.com/46156230/103430666-42e07900-4b7b-11eb-83c7-c7e75f40710b.png",
 			"description": "A Zombie Survival game where the player must survive as long as possible against an endless horde of zombies. The player can shoot zombies and pick up weapons. The player can also pick up health packs to heal themselves. The game ends when the player dies.",
 			"reflection": "Just 3 friends who built a game. Smart pointer make my life easy.",
-			"technologies": ["C++", "SFML"]
+			"technologies": ["C++", "SFML", "CMake"]
 		},
 		{
 			"name": "Graphing Calculator",
@@ -97,7 +97,7 @@
 			"image": "https://i.imgur.com/hJZS2Sy.png",
 			"description": "A graphing calculator that allows users to graph functions and perform basic calculations. Users can access previously graphed functions and display them on the graph.",
 			"reflection": "Trauma, haha just kidding. This was my final project for my CS003A(Intro to Computer Science II) class. I learned how to use C++ BETTER and SFML to create a graphing calculator. We used many of our data structures we built from scratch within this project such as vectors, linked lists, stacks, and queues. I learned I'm not the most creative person thanks to Ralph 😂.",
-			"technologies": ["C++", "SFML"]
+			"technologies": ["C++", "SFML", "CMake"]
 		},
 		{
 			"name": "Scroll of Time",
