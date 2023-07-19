@@ -36,7 +36,6 @@ export default function HomePage() {
 	const [showAboutMe, setShowAboutMe] = useState(true);
 	const [showProjects, setShowProjects] = useState(false);
 	const [focusProjectIndex, setFocusProjectIndex] = useState(0);
-	const [prevFocusProjectIndex, setPrevFocusProjectIndex] = useState(0);
 	const divRef = useRef<HTMLDivElement | null>(null);
 	const wide = useWindowWide(1024);
 
@@ -55,7 +54,7 @@ export default function HomePage() {
 							rel="noopener noreferrer"
 						>
 							<button className="hover:animate-pulse">
-								<AiFillGithub size={25} />
+								<AiFillGithub size={30} />
 							</button>
 						</a>
 						<a
@@ -64,7 +63,7 @@ export default function HomePage() {
 							rel="noopener noreferrer"
 						>
 							<button className="hover:animate-pulse">
-								<AiFillLinkedin size={25} />
+								<AiFillLinkedin size={30} />
 							</button>
 						</a>
 						<a
@@ -73,7 +72,7 @@ export default function HomePage() {
 							rel="noopener noreferrer"
 						>
 							<button className="hover:animate-pulse">
-								<AiFillInstagram size={25} />
+								<AiFillInstagram size={30} />
 							</button>
 						</a>
 						<a
@@ -82,7 +81,7 @@ export default function HomePage() {
 							rel="noopener noreferrer"
 						>
 							<button className="hover:animate-pulse">
-								<CgMail size={25} />
+								<CgMail size={30} />
 							</button>
 						</a>
 					</div>
@@ -90,7 +89,7 @@ export default function HomePage() {
 				<div ref={divRef} className="grid grid-cols-1 lg:grid-cols-2 gap-y-8">
 					{showAboutMe ? (
 						<section>
-							<div className="lg:sticky lg:top-16">
+							<div className="animate__animated animate__fadeIn lg:sticky lg:top-16">
 								<h1 className="text-4xl font-thin my-4">About Me</h1>
 								<div className="border-l-2 gradient-border pl-6 whitespace-pre-line w-11/12 lg:w-3/4 text-lg">
 									{`${info.aboutMe}`}
@@ -100,6 +99,7 @@ export default function HomePage() {
 					) : (
 						<section>
 							<div
+								key={focusProjectIndex}
 								className={`animate__animated ${
 									showProjects ? "animate__fadeIn" : ""
 								} lg:sticky lg:top-16`}
@@ -191,7 +191,6 @@ export default function HomePage() {
 													setShowAboutMe(false);
 												}
 												setShowProjects(true);
-												setPrevFocusProjectIndex(focusProjectIndex);
 												setFocusProjectIndex(index);
 												if (wide < 1024) {
 													executeScroll();
