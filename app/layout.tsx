@@ -12,10 +12,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className="dark">
-			<meta
-				property="og:image"
-				content="https://cdn.discordapp.com/attachments/941208408672067624/1131139972959830076/image.png"
-			/>
+			<meta property="og:image" content="https://brittanychiang.com/og.png" />
 			<body className="dark:bg-background">{children}</body>
 		</html>
 	);
