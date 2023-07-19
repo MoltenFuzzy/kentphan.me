@@ -1,9 +1,9 @@
 import "./globals.css";
 
-export const metadata = {
-	title: "Kent Phan",
-	description: "It's just honest work",
-};
+// export const metadata = {
+// 	title: "Kent Phan",
+// 	description: "It's just honest work",
+// };
 
 export default function RootLayout({
 	children,
@@ -12,10 +12,6 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className="dark">
-			<meta
-				property="og:image"
-				content="https://cdn.discordapp.com/attachments/941208408672067624/1131139972959830076/image.png"
-			/>
 			<meta name="twitter:title" content="Kent Phan" />
 			<meta name="twitter:description" content="It's just honest work" />
 			<meta
