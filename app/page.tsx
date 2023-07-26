@@ -208,7 +208,7 @@ export default function HomePage() {
 						</section>
 						<section className="flex flex-col justify-between">
 							<h1 className="text-4xl font-thin my-4">Resume</h1>
-							<div className="w-fit border-l-2 gradient-border pl-6 hover:opacity-80">
+							<div className="w-fit border-l-2 gradient-border pl-6 hover:opacity-80 transition-all duration-300 ease-in-out">
 								<a
 									href={`${info.resume}`}
 									target="_blank"
